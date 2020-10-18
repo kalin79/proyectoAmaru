@@ -1,0 +1,113 @@
+#navMain
+    background: $blue
+    width: 294px
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    overflow: hidden
+    .separate-navegation
+        height: 60px
+        @media screen and (min-width: 1250px)
+            height: 80px
+        @media screen and (min-width: 1400px)
+            height: 125px
+    .separate-boxMail
+        height: 45px
+        @media screen and (min-width: 1250px)
+            height: 60px
+        @media screen and (min-width: 1400px)
+            height: 85px
+    .box-nav
+        padding-left: 1rem
+    .boxWebmail
+        a
+            display: block
+            text-decoration: none
+            &:hover
+                p
+                    color: $yellow
+            p
+                @extend %opensans-700
+                color: white
+                font-size: 14px
+                margin: 0
+                transition: .5s ease color
+            .imgBoxMail
+                padding-top: 5px
+                margin-right: .65rem
+    ul
+        margin: 0
+        padding: 0
+        list-style: none
+        &.navegation-social
+            li
+                &:last-child
+                    margin-left: .85rem
+                img
+                    width: 25px 
+        li
+            line-height: 3rem
+        &.navegation-main
+                a
+                    @extend %opensans-700
+                    color: white 
+                    font-size: 14px
+                    line-height: 1.5em
+                    text-transform: uppercase
+                    text-decoration: none
+                    position: relative
+                    
+                    &:hover
+                        &:after,
+                        &:before
+                            width: 50%
+                    &:after
+                        content: ''
+                        position: absolute
+                        bottom: -2px
+                        right: 0
+                        width: 0%
+                        height: 2px
+                        background: $yellow
+                        transition: .5s ease width
+                    &:before
+                        content: ''
+                        position: absolute
+                        bottom: -2px
+                        left: 0
+                        width: 0%
+                        height: 2px
+                        background: $yellow
+                        transition: .5s ease width
+    .sidebarBox
+        padding: 31px 0 0 8px
+        height: 100%
+        .sidebar
+            height: 100%
+            &.sidebar-right
+                padding-left: .5rem
+                .nameLogoContainer
+                    padding: 3px 0 0 0
+                    img
+                        width: 134px
+            &.sidebar-left
+                // background: red
+                .menuContainer
+                    height: 100%
+                    cursor: pointer
+                    // background: black
+                    a
+                        display: block
+                        color: white
+                        text-align: center
+                        text-decoration: none
+                        transform: translateY(-25px)
+                        div
+                            @extend %opensans-700
+                            font-size: 12px
+                            text-transform: uppercase
+                .isotipoContainer
+                    img
+                        width: 44px

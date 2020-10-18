@@ -1,0 +1,76 @@
+.noscroll-full
+    position: relative
+    // overflow: hidden
+    box-sizing: border-box
+    height: 100vh
+    &.section-home04
+        overflow: hidden
+        .header-content
+            position: relative
+            z-index: 20
+            padding-top: 1.5rem
+            @media screen and (min-width: 1250px)
+                padding-top: 2.30rem
+            .titleNumer
+                color: white
+                margin-left: 0
+                line-height: 1.15em
+                .bold
+                    @extend %opensans-400
+        .body-content
+            padding-left: 0
+            
+    &.section-home03
+        .body-content
+            width: 660px
+            // border: 1px solid red
+            .box-logos
+                width: 90px
+                margin: .5rem
+                @media screen and (min-width: 1250px)
+                    width: 95px
+                @media screen and (min-width: 1400px)
+                    width: 110px
+                img
+                    width: 100%
+.scroll-full
+    width: 100vw
+    height: 100vh
+    position: relative
+    // overflow: hidden
+    box-sizing: border-box
+    &.full2
+        width: 175vw
+        @media screen and (min-width: 1250px)
+            width: 160vw
+        @media screen and (min-width: 1400px)
+            width: 140vw
+    
+    &.section-home01
+        &.bcgColor
+            background: $colorHumo
+    &.section-home00
+        .owl-sliderHome
+            width: 100vw
+            height: 100vh
+            .owl-stage-outer
+                height: 100vh
+                .owl-stage
+                    height: 100vh
+                    .owl-item
+                        height: 100vh
+
+            // .owl-wrapper,
+            // .owl-item
+            //     width: 100vw !important
+            //     height: 100vh !important
+        .slider-Content
+            padding-top: 80px
+            width: 460px
+            @media screen and (min-width: 1250px)
+                padding-top: 120px
+                width: 540px
+            // @media screen and (min-width: 1400px)
+            //     padding-top: 186px
+        .bcg
+            background-image: url('../image/b1.jpg')

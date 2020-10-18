@@ -1,0 +1,365 @@
+// .containerIcon
+
+// trigger animaciones
+#section-home01
+    z-index: 10
+    .trigger1
+        position: absolute
+        width: 100%
+        height: 30px
+        top: 60%
+        transform: translateY(-50%)
+        left: 0
+        border: 0px solid red
+#section-home02 
+    z-index: 11
+    .trigger1
+        position: absolute
+        width: 100%
+        height: 30px
+        bottom: -30%
+        transform: translateY(-50%)
+        left: 0
+        border: 0px solid red
+    .trigger2
+        position: absolute
+        width: 100%
+        height: 30px
+        bottom: -70%
+        transform: translateY(-50%)
+        left: 0
+        border: 0px solid red
+    .trigger3
+        position: absolute
+        width: 100%
+        height: 30px
+        bottom: -105%
+        transform: translateY(-50%)
+        left: 0
+        border: 0px solid red
+#section-home03
+    z-index: 11
+    .trigger1
+        position: absolute
+        width: 100%
+        height: 30px
+        bottom: -125%
+        transform: translateY(-50%)
+        left: 0
+        border: 0px solid red
+        @media screen and (min-width: 1250px)
+            bottom: -105%
+
+
+// ****************
+.bgc-footer
+    position: absolute
+    height: 100vh
+    top: 0px
+    background-image: url(../image/fondoFooter.jpg)
+    background-size: cover
+    width: 100%
+    z-index: 1
+.box-tipos-serv
+    padding-left: 4rem
+.box-servicio-list
+    position: relative
+    padding-right: 4rem
+
+.bcg-servicio
+    position: absolute
+    height: 150vh
+    top: -150px
+    background-image: url(../image/fondo-servicio.png)
+    background-size: cover
+    width: 100%
+    
+.box-icon-service
+    width: 280px
+    border: 0px solid red
+    margin-bottom: 3rem
+    @media screen and (min-width: 1250px)
+        width: 320px
+        margin-bottom: 2rem
+    @media screen and (min-width: 1400px)
+        width: 350px
+
+    .iconDescripcion
+        padding-top: .25rem
+        p
+            @extend %opensans-400
+            font-size: 13px
+            color: $grey
+            line-height: 1.45em
+            margin: 0 
+    .iconHeader
+        h2
+            margin: 0
+            @extend %opensans-700
+            font-size: 16px
+            color: $blue
+            line-height: 2em
+.container-fluid
+    padding-left: 4rem 
+    padding-right: 4rem 
+.body-content-image
+    img
+        width: 100%
+        object-fit: cover
+        height: 250px
+        @media screen and (min-width: 1250px)
+            height: 300px
+        @media screen and (min-width: 1400px)
+            height: 350px
+
+.box-mapa
+    height: 100px
+    position: relative
+    border: 0px solid red
+    .mapa-leyenda
+        position: absolute
+        top: 45px
+        left: -65px
+        width: 440px
+        @media screen and (min-width: 1250px)
+            top: 100px
+            left: -100px
+            width: 500px
+        @media screen and (min-width: 1400px)
+            top: 80px
+            left: -100px
+            width: 560px
+.col-home-servi-01
+    width: 600px
+    @media screen and (min-width: 1250px)
+        width: 850px
+.col-home-servi-03
+    .box-gancho
+        position: absolute
+        top: -260px
+        right: 1rem
+        @media screen and (min-width: 1250px)
+            top: -280px
+            // right: 70px
+        @media screen and (min-width: 1400px)
+            top: -90px
+        img
+            width: 180px
+            @media screen and (min-width: 1250px)
+                width: 200px
+
+.col-home-servi-02
+    width: 1050px
+    border: 0px solid red
+    position: relative
+    margin-left: 3rem
+    @media screen and (min-width: 1250px)
+        width: 830px
+.body-content
+    padding-left: 6.5rem
+    position: relative
+    z-index: 20
+    @media screen and (min-width: 1250px)
+        padding-left: 8.87rem
+    @media screen and (min-width: 1400px)
+        padding-left: 9rem
+    &.texto-footer
+        a
+            border-color: white
+            padding: .65rem 2.55rem
+            p
+                @extend %opensans-600
+                font-size: 12px
+                color: white
+                margin: 0 0 0 6px
+        p
+            @extend %opensans-300
+            color: white
+            font-size: 21px
+            letter-spacing: -.05em
+            line-height: 1.5em
+            margin: 0 
+            word-spacing: -.05em
+            // @media screen and (min-width: 1250px)
+            //     font-size: 16px
+            @media screen and (min-width: 1250px)
+                font-size: 25px
+    &.mHeader
+        margin-top: -5px
+    p
+        @extend %opensans-400
+        color: $negroClaro
+        font-size: 14px
+        letter-spacing: -.05em
+        line-height: 1.5em
+        margin: 0 
+        word-spacing: -.05em
+        // @media screen and (min-width: 1250px)
+        //     font-size: 16px
+        @media screen and (min-width: 1250px)
+            font-size: 18px
+    &.azul
+        p
+            color: $blue
+            font-size: 18px
+            letter-spacing: 0em
+            line-height: 1.25em
+            // @media screen and (min-width: 1250px)
+            //     font-size: 20px
+            @media screen and (min-width: 1250px)
+                font-size: 25px
+    a
+        border-radius: 30px
+        border: 1px solid $azulClaro
+        padding: .85rem 1.5rem
+        &:hover
+            background: transparent
+        p
+            @extend %opensans-600
+            font-size: 12px
+            color: $azulClaro
+            margin: 0 0 0 6px
+.separate-body-content-btn
+    height: 45px
+    @media screen and (min-width: 1250px)
+        height: 40px
+    @media screen and (min-width: 1400px)
+        height: 40px
+.separate-footer-content
+    height: 12px
+    @media screen and (min-width: 1250px)
+        height: 12px
+    @media screen and (min-width: 1400px)
+        height: 12px
+.separate-body-content
+    height: 30px
+    @media screen and (min-width: 1250px)
+        height: 40px
+    @media screen and (min-width: 1400px)
+        height: 40px
+.separate-header-content
+    height: 40px
+    @media screen and (min-width: 1250px)
+        // height: 40px
+        height: 20px
+    @media screen and (min-width: 1400px)
+        height: 30px
+.header-content
+    .titleNumer
+        @extend %opensans-300
+        color: $blue
+        font-size: 40px
+        letter-spacing: -.05em
+        line-height: .9em
+        margin-left: .75rem
+        @media screen and (min-width: 1250px)
+            font-size: 55px
+    .number
+        @extend %opensans-300
+        color: $blue
+        font-size: 85px
+        letter-spacing: -.05em
+        @media screen and (min-width: 1250px)
+            font-size: 120px
+.scrollHorizontal
+    white-space: nowrap
+    
+.scroll-horizontal
+    display: inline-block
+    vertical-align: top
+    margin-left: -4px
+    white-space: normal
+    &:first-child
+        margin-left: 0
+.owl-dots
+    margin: 0
+    position: absolute
+    bottom: 3%
+    left: 50%
+    transform: translateX(-50%)
+    @media screen and (min-width: 1250px)
+        bottom: 10%
+    button
+        outline: none !important
+        border: 0 !important
+        &.active,
+        &:hover,
+        &:focus
+            outline: none !important
+            border: 0 !important
+            span
+                background: white !important
+                outline: none !important
+                border: 0 !important
+        span
+            background: transparent !important 
+            width: 13px !important
+            height: 13px !important
+            margin: 0px 4px !important
+            border: 1px solid white
+.slider-box
+    .container
+        position: relative
+        z-index: 10
+    .slider-Content
+        margin-left: 4.5rem
+        @media screen and (min-width: 1400px)
+            margin-left: 0rem
+        .Slider-logo
+            img
+                width: 224px
+    .Slider-buttom
+        .btn-primary
+            background: $blue
+            border-radius: 30px
+            padding: 10px 30px  
+        span
+            @extend %opensans-600
+            font-size: 12px
+            margin-left: .5rem
+    .Slider-description
+        margin-top: 1.5rem
+        p
+            @extend %opensans-400
+            font-size: 13px
+            color: white
+            line-height: 1.5em
+            letter-spacing: -.05em
+            @media screen and (min-width: 1400px)
+                font-size: 15px
+    .Slider-title
+        margin-top: 30px
+        @media screen and (min-width: 1250px)
+            margin-top: 46px
+            
+        h1
+            @extend %opensans-700
+            font-size: 70px
+            color: white
+            line-height: .95em
+            letter-spacing: -.05em
+            word-spacing: -.1em
+            @media screen and (min-width: 1400px)
+                font-size: 80px
+
+
+.bcg
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.4)
+
