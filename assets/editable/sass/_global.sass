@@ -1,13 +1,14 @@
 // .containerIcon
-
+body
+    background: #f7f7f7
 // trigger animaciones
 #section-home01
     z-index: 10
     .trigger1
         position: absolute
         width: 100%
-        height: 30px
-        top: 60%
+        height: 60px
+        top: 70%
         transform: translateY(-50%)
         left: 0
         border: 0px solid red
@@ -46,9 +47,12 @@
         bottom: -125%
         transform: translateY(-50%)
         left: 0
-        border: 0px solid red
+        border: 1px solid red
         @media screen and (min-width: 1250px)
             bottom: -105%
+        @media screen and (min-width: 1400px)
+            bottom: -145%
+        
 
 
 // ****************
@@ -136,7 +140,7 @@
 .col-home-servi-03
     .box-gancho
         position: absolute
-        top: -260px
+        top: -203px
         right: 1rem
         @media screen and (min-width: 1250px)
             top: -280px
@@ -144,9 +148,9 @@
         @media screen and (min-width: 1400px)
             top: -90px
         img
-            width: 180px
+            width: 280px
             @media screen and (min-width: 1250px)
-                width: 200px
+                width: 302px
 
 .col-home-servi-02
     width: 1050px
@@ -262,13 +266,16 @@
         @media screen and (min-width: 1250px)
             font-size: 120px
 .scrollHorizontal
-    white-space: nowrap
+    @media screen and (min-width: 992px)
+        white-space: nowrap
+
     
 .scroll-horizontal
-    display: inline-block
-    vertical-align: top
-    margin-left: -4px
-    white-space: normal
+    @media screen and (min-width: 992px)
+        display: inline-block
+        vertical-align: top
+        margin-left: -4px
+        white-space: normal
     &:first-child
         margin-left: 0
 .owl-dots

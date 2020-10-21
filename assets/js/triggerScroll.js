@@ -1,10 +1,33 @@
 gsap.registerPlugin(ScrollTrigger)
 
+ScrollTrigger.saveStyles(".scrollHorizontal");
+
+let scrollTl = '';
+
+let container = document.getElementById("scrollHorizontal");
+
+function animacionVertical(){
+    
+    // Animacion para el home 01
+
+    const parallaxTl = gsap.timeline({
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#section-home01 .trigger1',
+            start: 'top center',
+            end: 'bottom center-=10%',
+            // pin: true,
+            scrub: true, // permite que la animacion se vuelva a reproduccion 
+            markers: false,
+        }
+    })
+    
+}
 function animacionHorizontal(){
 
-    let container = document.getElementById("scrollHorizontal");
+    
 
-    gsap.to(container, {
+    scrollTl = gsap.to(container, {
         x: () => -(container.scrollWidth - document.documentElement.clientWidth) + "px",
         ease: "none",
         scrollTrigger: {
@@ -36,7 +59,7 @@ function animacionHorizontal(){
         scrollTrigger: {
             trigger: '#section-home01 .trigger1',
             start: 'top center',
-            end: 'bottom center-=10%',
+            end: 'bottom center-=20%',
             // pin: true,
             scrub: true, // permite que la animacion se vuelva a reproduccion 
             markers: false,
@@ -44,7 +67,7 @@ function animacionHorizontal(){
     })
 
     parallaxTl
-        .from('#section-home01 .header-content', {duration: 1.5, x: '-30%'})
+        .from('#section-home01 .header-content', {duration: 1, x: '-30%'})
         .from('#section-home01 .body-content', {duration: 0.5, opacity: 0, y: '-10%',stagger: .8});
 
     
@@ -87,8 +110,8 @@ function animacionHorizontal(){
         ease: 'none',
         scrollTrigger: {
             trigger: '#section-home02 .trigger3',
-            start: 'top center',
-            end: 'bottom center-=10%',
+            start: 'top center-=5%',
+            end: 'bottom center-=15%',
             // pin: true,
             scrub: true, // permite que la animacion se vuelva a reproduccion 
             markers: false,
@@ -96,7 +119,7 @@ function animacionHorizontal(){
     })
     
     parallaxTl4
-        .from('#section-home02 .box-gancho', {duration: 0.5, opacity: 0, ease: Back.easeOut.config(1.7), y: '-80%'});
+        .from('#section-home02 .box-gancho', {duration: 1, ease: Back.easeOut.config(1.7), y: '-100%'});
 
 
     // Animacion para el home 03
@@ -105,8 +128,8 @@ function animacionHorizontal(){
         ease: 'none',
         scrollTrigger: {
             trigger: '#section-home03 .trigger1',
-            start: 'top center',
-            end: 'bottom center-=10%',
+            start: 'top center-=10%',
+            end: 'bottom center-=30%',
             // pin: true,
             scrub: true, // permite que la animacion se vuelva a reproduccion 
             markers: false,
@@ -145,15 +168,34 @@ function startAnimation(){
 
 
 $(function(){
-    animacionHorizontal();
+
+    ScrollTrigger.matchMedia({
+        "(min-width: 992px)": function() {
+            animacionHorizontal();
+            console.log('desk');
+            var tlMenu = gsap.timeline()
+            sidebarRight = $('.sidebar-right')
+            navMain = $('#navMain');
+            tlMenu
+                .set(sidebarRight, {opacity: 0} )
+                .set(navMain, {width: "61px"} );
+        }, 
+        "(max-width: 992px)": function() {
+            animacionVertical();
+            console.log('movil');
+            var tlMenu = gsap.timeline()
+            sidebarRight = $('.sidebar-right')
+            navMain = $('#navMain');
+            tlMenu
+                .set(sidebarRight, {opacity: 0} )
+                .set(navMain, {width: "100vw"} );
+        }
+    
+    })
+    
 
 
-    var tlMenu = gsap.timeline()
-        sidebarRight = $('.sidebar-right')
-        navMain = $('#navMain');
-    tlMenu
-        .set(sidebarRight, {opacity: 0} )
-        .set(navMain, {width: "61px"} );
+    
 
     // Animacion del Slider
 

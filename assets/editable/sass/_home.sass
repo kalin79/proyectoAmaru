@@ -1,8 +1,12 @@
+.bcgColor
+    background: #f7f7f7
 .noscroll-full
     position: relative
-    // overflow: hidden
+    overflow: hidden
     box-sizing: border-box
     height: 100vh
+    @media screen and (min-width: 992px)
+        overflow: visible
     &.section-home04
         overflow: hidden
         .header-content
@@ -37,8 +41,11 @@
     width: 100vw
     height: 100vh
     position: relative
-    // overflow: hidden
+    overflow: hidden
     box-sizing: border-box
+   
+    @media screen and (min-width: 992px)
+        overflow: visible
     &.full2
         width: 175vw
         @media screen and (min-width: 1250px)
