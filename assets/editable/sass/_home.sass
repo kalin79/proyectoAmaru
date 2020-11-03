@@ -1,14 +1,11 @@
 .bcgColor
     background: #f7f7f7
-.noscroll-full
-    position: relative
-    overflow: hidden
-    box-sizing: border-box
-    height: 100vh
-    @media screen and (min-width: 992px)
-        overflow: visible
+.scroll-full
     &.section-home04
         overflow: hidden
+        padding-bottom: 14rem
+        @media screen and ( min-width:992px)
+            padding-bottom: 0rem
         .header-content
             position: relative
             z-index: 20
@@ -23,11 +20,13 @@
                     @extend %opensans-400
         .body-content
             padding-left: 0
+
             
     &.section-home03
         .body-content
-            width: 660px
-            // border: 1px solid red
+            width: 100%
+            @media screen and (min-width: 992px)
+                width: 660px
             .box-logos
                 width: 90px
                 margin: .5rem
@@ -37,22 +36,7 @@
                     width: 110px
                 img
                     width: 100%
-.scroll-full
-    width: 100vw
-    height: 100vh
-    position: relative
-    overflow: hidden
-    box-sizing: border-box
-   
-    @media screen and (min-width: 992px)
-        overflow: visible
-    &.full2
-        width: 175vw
-        @media screen and (min-width: 1250px)
-            width: 160vw
-        @media screen and (min-width: 1400px)
-            width: 140vw
-    
+
     &.section-home01
         &.bcgColor
             background: $colorHumo
@@ -72,8 +56,11 @@
             //     width: 100vw !important
             //     height: 100vh !important
         .slider-Content
-            padding-top: 80px
-            width: 460px
+            padding-top: 30px
+            width: auto
+            @media screen and (min-width: 992px)
+                padding-top: 80px
+                width: 460px
             @media screen and (min-width: 1250px)
                 padding-top: 120px
                 width: 540px

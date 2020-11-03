@@ -54,92 +54,92 @@ function animacionHorizontal(){
 
     // Animacion para el home 01
 
-    const parallaxTl = gsap.timeline({
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#section-home01 .trigger1',
-            start: 'top center',
-            end: 'bottom center-=20%',
-            // pin: true,
-            scrub: true, // permite que la animacion se vuelva a reproduccion 
-            markers: false,
-        }
-    })
+    // const parallaxTl = gsap.timeline({
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //         trigger: '#section-home01 .trigger1',
+    //         start: 'top center',
+    //         end: 'bottom center-=20%',
+    //         // pin: true,
+    //         scrub: true, // permite que la animacion se vuelva a reproduccion 
+    //         markers: false,
+    //     }
+    // })
 
-    parallaxTl
-        .from('#section-home01 .header-content', {duration: 1, x: '-30%'})
-        .from('#section-home01 .body-content', {duration: 0.5, opacity: 0, y: '-10%',stagger: .8});
+    // parallaxTl
+    //     .from('#section-home01 .header-content', {duration: 1, x: '-30%'})
+    //     .from('#section-home01 .body-content', {duration: 0.5, opacity: 0, y: '-10%',stagger: .8});
 
     
 
     // Animacion para el home 02
     
-    const parallaxTl2 = gsap.timeline({
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#section-home02 .trigger1',
-            start: 'top center',
-            end: 'bottom center-=10%',
-            // pin: true,
-            scrub: true, // permite que la animacion se vuelva a reproduccion 
-            markers: false,
-        }
-    })
+    // const parallaxTl2 = gsap.timeline({
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //         trigger: '#section-home02 .trigger1',
+    //         start: 'top center',
+    //         end: 'bottom center-=10%',
+    //         // pin: true,
+    //         scrub: true, // permite que la animacion se vuelva a reproduccion 
+    //         markers: false,
+    //     }
+    // })
 
-    parallaxTl2
-        .from('#section-home02 .header-content', {duration: 1.5, x: '-30%'})
-        .from('#section-home02 .body-content', {duration: 0.5, opacity: 0, y: '-10%',stagger: .8});
+    // parallaxTl2
+    //     .from('#section-home02 .header-content', {duration: 1.5, x: '-30%'})
+    //     .from('#section-home02 .body-content', {duration: 0.5, opacity: 0, y: '-10%',stagger: .8});
     
-    const parallaxTl3 = gsap.timeline({
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#section-home02 .trigger2',
-            start: 'top center',
-            end: 'bottom center-=10%',
-            // pin: true,
-            scrub: true, // permite que la animacion se vuelva a reproduccion 
-            markers: false,
-        }
-    })
+    // const parallaxTl3 = gsap.timeline({
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //         trigger: '#section-home02 .trigger2',
+    //         start: 'top center',
+    //         end: 'bottom center-=10%',
+    //         // pin: true,
+    //         scrub: true, // permite que la animacion se vuelva a reproduccion 
+    //         markers: false,
+    //     }
+    // })
     
-    parallaxTl3
-        .from('#section-home02 .box-tipos-serv .box-icon-service', {duration: 0.5, opacity: 0, scale: 0,stagger: .8});
+    // parallaxTl3
+    //     .from('#section-home02 .box-tipos-serv .box-icon-service', {duration: 0.5, opacity: 0, scale: 0,stagger: .8});
     
 
-    const parallaxTl4 = gsap.timeline({
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#section-home02 .trigger3',
-            start: 'top center-=5%',
-            end: 'bottom center-=15%',
-            // pin: true,
-            scrub: true, // permite que la animacion se vuelva a reproduccion 
-            markers: false,
-        }
-    })
+    // const parallaxTl4 = gsap.timeline({
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //         trigger: '#section-home02 .trigger3',
+    //         start: 'top center-=5%',
+    //         end: 'bottom center-=15%',
+    //         // pin: true,
+    //         scrub: true, // permite que la animacion se vuelva a reproduccion 
+    //         markers: false,
+    //     }
+    // })
     
-    parallaxTl4
-        .from('#section-home02 .box-gancho', {duration: 1, ease: Back.easeOut.config(1.7), y: '-100%'});
+    // parallaxTl4
+    //     .from('#section-home02 .box-gancho', {duration: 1, ease: Back.easeOut.config(1.7), y: '-100%'});
 
 
     // Animacion para el home 03
 
-    const parallaxTl5 = gsap.timeline({
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#section-home03 .trigger1',
-            start: 'top center-=10%',
-            end: 'bottom center-=30%',
-            // pin: true,
-            scrub: true, // permite que la animacion se vuelva a reproduccion 
-            markers: false,
-        },
-    })
+    // const parallaxTl5 = gsap.timeline({
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //         trigger: '#section-home03 .trigger1',
+    //         start: 'top center-=10%',
+    //         end: 'bottom center-=30%',
+    //         // pin: true,
+    //         scrub: true, // permite que la animacion se vuelva a reproduccion 
+    //         markers: false,
+    //     },
+    // })
 
-    parallaxTl5
-        .from('#section-home03 .header-content', {duration: 1.5, x: '-30%'})
-        .from('#section-home03 .body-content .box-logos', {duration: 0.5, opacity: 0, ease: Back.easeOut.config(1.7), scale: 0,stagger: .8})
-        .to(['.noscroll-full', '.scroll-full'], {duration: 0, css: {overflow: 'hidden'} })
+    // parallaxTl5
+    //     .from('#section-home03 .header-content', {duration: 1.5, x: '-30%'})
+    //     .from('#section-home03 .body-content .box-logos', {duration: 0.5, opacity: 0, ease: Back.easeOut.config(1.7), scale: 0,stagger: .8})
+    //     .to(['.noscroll-full', '.scroll-full'], {duration: 0, css: {overflow: 'hidden'} })
 
     // Fin de las animaciones del home
 }
