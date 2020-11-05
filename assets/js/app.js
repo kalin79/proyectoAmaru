@@ -1,32 +1,6 @@
-var controller;
 
-function animationHorizontal(){
+gsap.registerPlugin(ScrollTrigger)
 
-
-    // console.log(controller)
-    if (controller != undefined ){
-        controller = controller.destroy(true);
-    }
-
-    
-    controller = new ScrollMagic.Controller({
-        vertical: false,
-        globalSceneOptions: {
-            triggerHook: 0.15,
-        }
-    });
-
-    console.log(controller)
-
-    // build scene
-
-}
-
-
-
-function callback(event){
-    startAnimation();
-}
 
 function startAnimation(){
     var tlSlider = gsap.timeline({duration: 1})
@@ -43,24 +17,30 @@ function startAnimation(){
         .from(SliderDescription, {duration: timeSlide, opacity: 0,y: "10%",ease:Power4.easeInOut})
         .from(SliderButtom, {duration: timeSlide, opacity: 0, x: "-5%", ease:Power1.easeIn})
 }
-$(document).ready(function(){
-    var main = document.querySelector("scrollHorizontal");
+function callback(event){
+    startAnimation();
+}
+$(function(){
 
-    window.addEventListener("wheel", e => {
-        e.preventDefault();
-        main.scrollLeft += e.deltaY > 0 ? 100 : -100
-    }, { passive: false });
-    // Orientación de navegacion
-    animationHorizontal()
-    // Inicializacion de la barra de menu principal
-
-    var tlMenu = gsap.timeline()
-        sidebarRight = $('.sidebar-right')
-        navMain = $('#navMain');
-    tlMenu
-        .set(sidebarRight, {opacity: 0} )
-        .set(navMain, {width: "61px"} );
-
+    ScrollTrigger.matchMedia({
+        "(min-width: 992px)": function() {
+            var tlMenu = gsap.timeline()
+            sidebarRight = $('#navMain .sidebar-right')
+            navMain = $('#navMain');
+            tlMenu
+                .set(sidebarRight, {opacity: 0} )
+                .set(navMain, {width: "61px"} );
+        }, 
+        "(max-width: 992px)": function() {
+            var tlMenu = gsap.timeline()
+            sidebarRight = $('#navMain .sidebar-right')
+            navMain = $('#navMain');
+            tlMenu
+                .set(sidebarRight, {opacity: 0} )
+                .set(navMain, {width: "100vw"} );
+        }
+    
+    })
 
     // Animacion del Slider
 
@@ -83,16 +63,29 @@ $(document).ready(function(){
         }
     })
 
-    
-
     // Eventos
-
+    $(".clickMenuMainMobile").click(function(){
+        var sidebarBox = $('#navMainMobile .sidebarBox'),
+            sidebarRight = $("#navMainMobile .sidebar-right"),
+            timeNav = .5,
+            open = $(this).data("name"),
+            tlMenu = gsap.timeline();
+        console.log(open)
+        if (open == "open"){
+            sidebarRight.addClass("open");
+            $(this).data("name","close");
+        }else{
+            $(this).data("name","open");
+            sidebarRight.removeClass("open");
+        }
+    });
+    
     $( "#navMain" ).hover(
         function() {
             var tlMenu = gsap.timeline()
             dataMenu = $(this).data('menu')
-            sidebarRight = $('.sidebar-right')
-            btnMenuNav = $('.btn-menuNav')
+            sidebarRight = $('#navMain .sidebar-right')
+            btnMenuNav = $('#navMain .btn-menuNav')
             timeNav = .5
             navMain = $('#navMain');
             tlMenu
@@ -103,8 +96,8 @@ $(document).ready(function(){
         function() {
             var tlMenu = gsap.timeline()
             dataMenu = $(this).data('menu')
-            sidebarRight = $('.sidebar-right')
-            btnMenuNav = $('.btn-menuNav')
+            sidebarRight = $('#navMain .sidebar-right')
+            btnMenuNav = $('#navMain .btn-menuNav')
             timeNav = .5
             navMain = $('#navMain');
             tlMenu
@@ -113,28 +106,14 @@ $(document).ready(function(){
                 .to(btnMenuNav, {duration: timeNav, opacity: 1,ease:Power3.easeInOut});
         }
     );
+});
 
 
-    // $('.clickMenuMain').click(function(){
-    //     var tlMenu = gsap.timeline()
-    //         dataMenu = $(this).data('menu')
-    //         sidebarRight = $('.sidebar-right')
-    //         btnMenuNav = $('.btn-menuNav')
-    //         timeNav = .5
-    //         navMain = $('#navMain');
-    //     if (dataMenu === 'open'){
-    //         tlMenu
-    //             .to(btnMenuNav, {duration: timeNav, opacity: 0,ease:Power3.easeInOut})
-    //             .to(navMain, {duration: timeNav, width: "294px",ease:Power3.easeInOut})
-    //             .to(sidebarRight,{duration: timeNav, opacity: 1,ease:Power3.easeInOut});
-    //             $(this).data('menu', 'close')
-    //     }else{
-    //         tlMenu
-    //             .to(sidebarRight,{duration: timeNav, opacity: 0,ease:Power3.easeInOut})
-    //             .to(navMain, {duration: timeNav, width: "61px",ease:Power3.easeInOut})
-    //             .to(btnMenuNav, {duration: timeNav, opacity: 1,ease:Power3.easeInOut});
 
-    //         $(this).data('menu', 'open')
-    //     }
-    // });
-})
+
+// $(window).resize(function() {
+//     if (activeDevice != _Device)
+//         location.reload();
+//     else
+        
+// });

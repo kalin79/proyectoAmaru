@@ -7,34 +7,48 @@ body
         position: absolute
         width: 100%
         height: 1px
-        top: 100%
+        top: 0%
         // transform: translateY(-50%)
         left: 0
         border: 0px solid red
+        @media screen and (min-width: 992px)
+            top: 100%
 #section-home02 
     z-index: 11
+    .header-content,
+    .body-content
+        padding-left: 31px 
+        padding-right: 31px 
+        @media screen and (min-width: 992px)
+            padding-left: 0px 
+            padding-right: 0px 
     .container-fluid
         padding-left: 0
         padding-right: 0
         @media screen and (min-width: 992px)
             padding-left: 4rem
             padding-right: 4rem
+   
     .trigger1
         position: absolute
         width: 100%
         height: 1px
-        top: 390%
+        top: 0%
         left: 0
         border: 0px solid red
+        @media screen and (min-width: 992px)
+            top: 390%
         @media screen and (min-width: 1250px)
             top: 390%
     .trigger2
         position: absolute
         width: 100%
         height: 1px
-        top: 600%
+        top: 0%
         left: 0
         border: 0px solid red
+        @media screen and (min-width: 992px)
+            top: 600%
         @media screen and (min-width: 1250px)
             top: 580%
 
@@ -42,9 +56,11 @@ body
         position: absolute
         width: 100%
         height: 1px
-        top: 770%
+        top: 0%
         left: 0
         border: 0px solid red
+        @media screen and (min-width: 992px)
+            top: 770%
         @media screen and (min-width: 1250px)
             top: 680%
 #section-home03
@@ -56,10 +72,12 @@ body
         position: absolute
         width: 100%
         height: 15px
-        top: 920%
+        top: 0%
         // transform: translateY(-50%)
         left: 0
         border: 0px solid red
+        @media screen and (min-width: 992px)
+            top: 810%
         @media screen and (min-width:1250px)
             top: 720%
 
@@ -67,12 +85,14 @@ body
 // ****************
 .bgc-footer
     position: absolute
-    height: 100vh
+    height: 100%
     top: 0px
     background-image: url(../image/fondoFooter.jpg)
     background-size: cover
     width: 100%
     z-index: 1
+    @media screen and (min-width: 992px)
+        height: 100vh
 .box-tipos-serv
     padding-left: 2rem
     @media screen and (min-width: 992px)
@@ -178,9 +198,11 @@ body
 .col-home-servi-03
     margin: auto
     text-align: center
+    overflow: hidden
     @media screen and (min-width: 992px)
         margin: auto
         text-align: left
+        overflow: visible
     .box-gancho
         @media screen and (min-width: 992px)
             position: absolute
@@ -333,14 +355,13 @@ body
 
 // scroll horizontal
 .scrollHorizontal
-    width: 491%
-    height: 100%
-    display: flex
-    flex-wrap: nowrap
-    // @media screen and (min-width: 992px)
-    //     width: 675vh
-    // @media screen and (min-width: 1250px)
-    //     width: 675vh
+    overflow: hidden
+    @media screen and (min-width: 992px)
+        width: 491%
+        height: 100%
+        display: flex
+        flex-wrap: nowrap
+        overflow: visible
     @media screen and (min-width: 1250px)
         width: 471%
     @media screen and (min-width: 1400px)
@@ -349,24 +370,31 @@ body
 .scroll-full,
 .scroll-full2,
     width: 100%
-    height: 100vh
     border: 0px solid red
     position: relative
     box-sizing: border-box
+    @media screen and (min-width: 992px)
+        height: 100vh
     // overflow: hidden
 
 .scroll-full2
-    width: 180%
+    // width: 180%
+    @media screen and (min-width: 992px)
+        width: 180%
     @media screen and (min-width: 1250px)
         width: 160%
     @media screen and (min-width: 1400px)
         width: 130%
 .scroll-full3
-    width: 70%
+    // width: 70%
+    @media screen and (min-width: 992px)
+        width: 70%
     @media screen and (min-width: 1400px)
         width: 40%
 .scroll-full4
-    width: 41%
+    // width: 41%
+    @media screen and (min-width: 992px)
+        width: 41%
     @media screen and (min-width: 1400px)
         width: 35%
 
